@@ -16,7 +16,7 @@ function App() {
               <span className="pl-1">↓</span>
             </button>
           </a>
-          <div className="absolute inset-0 z-0 opacity-30 md:opacity-40">
+          <div className="absolute inset-0 z-0 opacity-40">
             <img
               src="./herofern.png"
               className="w-full h-full object-cover md:object-contain"
