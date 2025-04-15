@@ -47,7 +47,7 @@ export default function FernGallery() {
           key={`${img.id}-${i}`}
           src={img.urls.small}
           alt={img.alt_description || 'fern'}
-          className="w-full md:w-1/5 h-80 object-cover"
+          className="w-full md:w-1/5 h-80 object-cover rounded-md"
         />
       ))}
     </div>
