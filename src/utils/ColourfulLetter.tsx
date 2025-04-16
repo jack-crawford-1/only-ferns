@@ -20,9 +20,7 @@ export function ColourfulLetter({ letter }: { letter: string }) {
     setColour(GetMidtoneColour());
   };
 
-  const handleMouseLeave = () => {
-    setIsHovered(false);
-  };
+  const handleMouseLeave = () => setIsHovered(false);
 
   return (
     <span
@@ -31,8 +29,8 @@ export function ColourfulLetter({ letter }: { letter: string }) {
       style={{
         color: colour,
         transition: isHovered
-          ? 'color 0.3s ease-in-out '
-          : 'color 3s ease-in-out',
+          ? 'color 0.3s ease-in-out'
+          : 'color 1s ease-in-out',
       }}
     >
       {letter}

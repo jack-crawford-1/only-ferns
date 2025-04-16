@@ -1,23 +1,26 @@
-export function GetRandomColour() {
-  const hue = Math.floor(Math.random() * 360);
-  const saturation = Math.floor(Math.random() * 50) + 200;
-  const lightness = Math.floor(Math.random() * 40) + 20;
+function getRandomFromRange(min: number, max: number) {
+  return Math.floor(Math.random() * (max - min)) + min;
+}
 
+function generateHSL(
+  hueRange: [number, number],
+  satRange: [number, number],
+  lightRange: [number, number]
+) {
+  const hue = getRandomFromRange(...hueRange);
+  const saturation = getRandomFromRange(...satRange);
+  const lightness = getRandomFromRange(...lightRange);
   return `hsl(${hue}, ${saturation}%, ${lightness}%)`;
+}
+
+export function GetRandomColour() {
+  return generateHSL([0, 360], [50, 100], [20, 60]);
 }
 
 export function GetMidtoneColour() {
-  const hue = Math.floor(Math.random() * 360);
-  const saturation = Math.floor(Math.random() * 40) + 60;
-  const lightness = Math.floor(Math.random() * 20) + 40;
-
-  return `hsl(${hue}, ${saturation}%, ${lightness}%)`;
+  return generateHSL([0, 360], [60, 100], [40, 60]);
 }
 
 export function GetNatureColour() {
-  const hue = Math.floor(Math.random() * 40) + 90;
-  const saturation = Math.floor(Math.random() * 20) + 50;
-  const lightness = Math.floor(Math.random() * 20) + 50;
-
-  return `hsl(${hue}, ${saturation}%, ${lightness}%)`;
+  return generateHSL([90, 130], [50, 70], [50, 70]);
 }
