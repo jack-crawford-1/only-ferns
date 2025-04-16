@@ -4,7 +4,7 @@ import FernGallery from './components/FernGallery';
 
 function App() {
   return (
-    <div className="bg-dark-background w-full">
+    <div className="dark:bg-dark-background bg-background w-full winky">
       <div className="relative h-screen flex flex-col justify-center items-center">
         <HeroText />
         <HeroImage />

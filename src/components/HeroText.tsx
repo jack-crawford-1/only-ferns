@@ -14,10 +14,14 @@ export default function HeroText() {
 
       <a href="#ferns" className="mt-10 mb-4">
         <button
-          style={{ borderColor: buttonColour, border: '4px solid' }}
-          className="text-text py-3 px-8 rounded-md shadow-md uppercase font-bold text-shadow-emerald-900 text-shadow-md transition-colors duration-300 s border-2"
+          style={{
+            border: '4px solid',
+            backgroundColor: buttonColour,
+          }}
+          className="text-text dark:text-dark-text bg-dark-background  dark:bg-emerald-800 py-3 px-5 rounded-lg shadow-md uppercase font-bold transition-colors duration-300 "
         >
-          Reveal Ferns <span className="pl-1">↓</span>
+          See Ferns
+          <span className="pl-4">🌿 ↓</span>
         </button>
       </a>
     </div>

@@ -1,6 +1,6 @@
 export default function HeroImage() {
   return (
-    <div className="absolute inset-0 z-0 opacity-40">
+    <div className="absolute inset-0 z-0 dark:opacity-40">
       <img
         src="./herofern.png"
         alt="Hero Fern"

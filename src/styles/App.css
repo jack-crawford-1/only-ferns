@@ -1,12 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap');
+
 @import 'tailwindcss';
 
 @theme {
-  --color-background: #ffffff;
+  --color-background: #f1f1f1;
   --color-dark-background: #000000;
   --color-text: #ffffff;
-  --color-dark-text: #000000;
+  --color-dark-text: #ffffff;
 }
 
 html {
   scroll-behavior: smooth;
+}
+
+.winky {
+  font-family: 'Winky Rough', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
 }
