@@ -1,19 +1,12 @@
-import HeroText from './components/HeroText';
-import HeroImage from './components/HeroImage';
-import FernGallery from './components/FernGallery';
+import { Routes, Route } from 'react-router-dom';
+import Home from './pages/Home';
+import Dashboard from './pages/Dashboard';
 
-function App() {
+export default function App() {
   return (
-    <div className="dark:bg-dark-background bg-background w-full winky">
-      <div className="relative h-screen flex flex-col justify-center items-center">
-        <HeroText />
-        <HeroImage />
-      </div>
-      <div className="min-h-screen" id="ferns">
-        <FernGallery />
-      </div>
-    </div>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/dashboard" element={<Dashboard />} />
+    </Routes>
   );
 }
-
-export default App;
