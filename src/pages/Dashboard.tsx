@@ -107,7 +107,7 @@ const Dashboard = () => {
             return (
               <motion.button
                 key={letter}
-                className="md:w-[100px] md:h-[100px] w-[50px] h-[50px] rounded-full flex items-center justify-center text-3xl font-bold select-none"
+                className="md:w-[100px] md:h-[100px] w-[80px] h-[80px] rounded-full flex items-center justify-center text-3xl font-bold select-none"
                 layout
                 whileTap={{ scale: 0.9 }}
                 disabled={
@@ -150,17 +150,18 @@ const Dashboard = () => {
         </motion.ul>
       </motion.div>
 
-      <input
-        type="text"
-        ref={inputRef}
-        value={userGuess}
-        onChange={handleInput}
-        disabled={isShowingSequence}
-        className="mt-6 text-white text-xl px-4 py-2 rounded-md"
-        placeholder="Type the sequence..."
-        maxLength={sequence.length}
-      />
-
+      <div className="p-10">
+        <input
+          type="text"
+          ref={inputRef}
+          value={userGuess}
+          onChange={handleInput}
+          disabled={isShowingSequence}
+          className="mt-6 text-white text-xl px-4 py-2 rounded-md hidden md:block"
+          placeholder="Type the sequence..."
+          maxLength={sequence.length}
+        />
+      </div>
       {gameStatus === 'success' && (
         <p className="text-green-400 font-bold text-xl mt-4">✅ Correct!</p>
       )}
